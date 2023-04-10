@@ -5,7 +5,7 @@
   "repository": "https://github.com/dev-academy-challenges/react-boilerplate.git",
   "main": "server/index.js",
   "scripts": {
-    "start": "run-p webpack server",
+    "start": "npm-run-all webpack server",
     "dev": "run-p client:watch server:watch",
     "webpack": "webpack --config client/webpack.config.js",
     "server": "ts-node server/index.ts",
