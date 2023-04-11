@@ -1184,3 +1184,13 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+.contact-box{
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+}
+ .contact-box h3{
+  color: #18d26e;
+ }

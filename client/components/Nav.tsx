@@ -1,21 +1,20 @@
+import { Link } from 'react-router-dom'
+
 interface Props {
-  selected: React.Dispatch<React.SetStateAction<string>>
+  //funcSelected: React.Dispatch<React.SetStateAction<string>>
+  selected: string | undefined
   state: string
 }
 
 export default function Nav(props: Props) {
   const { selected, state } = props
 
-  function handleNavClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-    e.preventDefault()
-    console.log('This ran')
-    selected(e.currentTarget.innerText)
-  }
+  const navItems = ['About', 'Resume', 'Portfolio', 'Contact']
   return (
     <header id="header" className={state}>
       <div className="container">
         <h1>
-          <a href="index.html">Reuben Hawthorne-Jensen</a>
+          <Link to="/">Reuben Hawthorne-Jensen</Link>
         </h1>
         {/* Uncomment below if you prefer to use an image logo */}
         <a href="index.html" className="mr-auto">
@@ -27,46 +26,47 @@ export default function Nav(props: Props) {
 
         <nav id="navbar" className="navbar">
           <ul>
-            <li>
-              <a className="nav-link active" onClick={handleNavClick}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" onClick={handleNavClick}>
-                About
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" onClick={handleNavClick}>
-                Resume
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" onClick={handleNavClick}>
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a className="nav-link" onClick={handleNavClick}>
-                Contact
-              </a>
-            </li>
+            {navItems.map((item) => {
+              if (item === selected) {
+                return (
+                  <li key={item}>
+                    <Link to={`/${item}`} className="nav-link active">
+                      {item}
+                    </Link>
+                  </li>
+                )
+              } else {
+                return (
+                  <li key={item}>
+                    <Link to={`/${item.toLowerCase()}`} className="nav-link">
+                      {item}
+                    </Link>
+                  </li>
+                )
+              }
+            })}
           </ul>
           <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>
 
         <div className="social-links">
-          <a href="#" className="twitter">
-            <i className="bi bi-twitter"></i>
+          <a
+            href="https://github.com/reubenj95"
+            className="github"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-github"></i>
           </a>
-          <a href="#" className="facebook">
-            <i className="bi bi-facebook"></i>
+          <a href="mailto:reuben.jensen11@gmail.com" className="email">
+            <i className="bi bi-envelope"></i>
           </a>
-          <a href="#" className="instagram">
-            <i className="bi bi-instagram"></i>
-          </a>
-          <a href="#" className="linkedin">
+          <a
+            href="https://www.linkedin.com/in/reubenjensen95/"
+            className="linkedin"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="bi bi-linkedin"></i>
           </a>
         </div>
