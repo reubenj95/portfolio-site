@@ -4,53 +4,34 @@ import Nav from './Nav'
 import Resume from './Resume'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
+import { Route, Routes, useParams } from 'react-router-dom'
 
 function App() {
-  const [selected, setSelected] = useState('Home')
+  //const [selected, setSelected] = useState('Home')
+  const { selected } = useParams()
   const [navState, setNavState] = useState('')
 
   useEffect(() => {
-    if (selected == 'Home') {
+    console.log(selected)
+    console.log(navState)
+    if (!selected) {
       setNavState('')
     } else {
       setNavState('header-top')
     }
-  }, [selected])
+  })
 
-  console.log(selected, navState)
-  switch (selected) {
-    case 'Home':
-      return <Nav selected={setSelected} state={navState} />
-
-    case 'About':
-      return (
-        <>
-          <Nav selected={setSelected} state={navState} />
-          <About />
-        </>
-      )
-    case 'Resume':
-      return (
-        <>
-          <Nav selected={setSelected} state={navState} />
-          <Resume />
-        </>
-      )
-    case 'Portfolio':
-      return (
-        <>
-          <Nav selected={setSelected} state={navState} />
-          <Portfolio />
-        </>
-      )
-    case 'Contact':
-      return (
-        <>
-          <Nav selected={setSelected} state={navState} />
-          <Contact />
-        </>
-      )
-  }
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Nav selected="Home" state="" />} />
+        <Route path="about" element={<About />} />
+        <Route path="resume" element={<Resume />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+    </>
+  )
 }
 
 export default App
