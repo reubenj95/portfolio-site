@@ -25,10 +25,10 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Nav selected="Home" state="" />} />
-        <Route path="about" element={<About />} />
+        {/* <Route path="about" element={<About />} />
         <Route path="resume" element={<Resume />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />} /> */}
       </Routes>
     </>
   )
