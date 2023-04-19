@@ -5,6 +5,7 @@ import Resume from './Resume'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
 import { Route, Routes, useParams } from 'react-router-dom'
+import PortfolioDetails from './PortfolioDetails'
 
 function App() {
   //const [selected, setSelected] = useState('Home')
@@ -12,8 +13,6 @@ function App() {
   const [navState, setNavState] = useState('')
 
   useEffect(() => {
-    console.log(selected)
-    console.log(navState)
     if (!selected) {
       setNavState('')
     } else {
@@ -29,6 +28,7 @@ function App() {
         <Route path="resume" element={<Resume />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="portfolio-details" element={<PortfolioDetails />} />
       </Routes>
     </>
   )
