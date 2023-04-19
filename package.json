@@ -9,7 +9,7 @@
     "build:client": "npm run webpack -- --mode production",
     "start": "ts-node server/index.ts",
     "dev": "run-p client:watch server:watch",
-    "webpack": "webpack --config client/webpack.config.js",
+    "webpack": "webpack --config ./client/webpack.config.js",
     "server": "ts-node server/index.ts",
     "client:watch": "npm run webpack -- --watch",
     "server:watch": "nodemon server/index.ts",
