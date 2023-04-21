@@ -3,11 +3,9 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable('portfolio_images', (table) => {
+  return knex.schema.createTable('catgeories', (table) => {
     table.increments('id')
-    table.integer('entry_id')
-    table.text('image_url')
-    table.text('image_alt_text')
+    table.text('name')
   })
 }
 
@@ -16,5 +14,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTable('portfolio_images')
+  return knex.schema.dropTable('categories')
 }
