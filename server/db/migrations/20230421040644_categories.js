@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable('catgeories', (table) => {
+  return knex.schema.createTable('categories', (table) => {
     table.increments('id')
     table.text('name')
   })

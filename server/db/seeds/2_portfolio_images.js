@@ -4,8 +4,7 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
+  await knex('portfolio_images').insert([
     {
       id: 1,
       entry_id: 1,
@@ -14,8 +13,3 @@ exports.seed = async function (knex) {
     },
   ])
 }
-
-table.increments('id')
-table.integer('entry_id')
-table.text('image_url')
-table.text('image_alt_text')
