@@ -49,6 +49,7 @@
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
+    "@types/superagent": "^4.1.16",
     "babel-loader": "^8.2.2",
     "eslint": "^8.10.0",
     "eslint-plugin-import": "^2.25.4",
@@ -79,6 +80,7 @@
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "sqlite3": "^5.1.6",
+    "superagent": "^8.0.9",
     "ts-node": "^10.9.1",
     "webpack": "^5.69.1"
   },
