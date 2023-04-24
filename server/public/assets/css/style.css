@@ -782,7 +782,7 @@ section .container {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-flters li {
+.portfolio #portfolio-flters button {
   cursor: pointer;
   display: inline-block;
   padding: 8px 16px 10px 16px;
@@ -795,14 +795,15 @@ section .container {
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
+  border-style: solid;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters button:hover,
+.portfolio #portfolio-flters button.filter-active {
   background: #18d26e;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.portfolio #portfolio-flters button:last-child {
   margin-right: 0;
 }
 

@@ -19,7 +19,7 @@ export default function PorfolioCard(props: Props) {
 
           <div className="portfolio-info">
             <h4>{entry.entryTitle}</h4>
-            <p>{entry.name}</p>
+            <p>{entry.category}</p>
           </div>
         </div>
       </div>

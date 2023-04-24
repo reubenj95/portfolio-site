@@ -30,7 +30,8 @@ function fetchPortfolioEntries(db = connection): Promise<FullPorfolio[]> {
       'portfolio.client_url',
       'collaborators.name as collaboratorName',
       'portfolio_images.image_url',
-      'portfolio_images.image_alt_text'
+      'portfolio_images.image_alt_text',
+      'categories.name as category'
     )
 }
 

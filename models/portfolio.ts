@@ -12,6 +12,7 @@ export interface PortfolioEntry {
   image_alt_text: string
   client: string
   client_url: string
+  category: string
 }
 
 export interface FullPorfolio extends PortfolioEntry {
