@@ -113,28 +113,27 @@ export default function Resume() {
                     <em>NZEI Te Riu Roa</em>
                   </a>
                 </p>
-                <p>
-                  <ul>
-                    <li>
-                      Project management of the development of NZEI Te Riu
-                      Roa&apos;s new, consolidated website to replace 7+ legacy
-                      properties.
-                    </li>
-                    <li>
-                      Collaborative problem solving to support organising and
-                      campaign activities with digital tools and solutions.
-                    </li>
-                    <li>
-                      Development of minor front-end features, such as
-                      responsive header layouts, template modificatins, and
-                      simple calculators (Javascript).
-                    </li>
-                    <li>
-                      Maintaining and updating content across NZEI Te Riu
-                      Roa&apos;s existing web properties.
-                    </li>
-                  </ul>
-                </p>
+
+                <ul>
+                  <li>
+                    Project management of the development of NZEI Te Riu
+                    Roa&apos;s new, consolidated website to replace 7+ legacy
+                    properties.
+                  </li>
+                  <li>
+                    Collaborative problem solving to support organising and
+                    campaign activities with digital tools and solutions.
+                  </li>
+                  <li>
+                    Development of minor front-end features, such as responsive
+                    header layouts, template modificatins, and simple
+                    calculators (Javascript).
+                  </li>
+                  <li>
+                    Maintaining and updating content across NZEI Te Riu
+                    Roa&apos;s existing web properties.
+                  </li>
+                </ul>
               </div>
               <div className="resume-item">
                 <h4>Marketing Executive</h4>
@@ -148,27 +147,26 @@ export default function Resume() {
                     <em>Storbie</em>
                   </a>
                 </p>
-                <p>
-                  <ul>
-                    <li>
-                      Maintaining and updating content on the old Storbie
-                      website (ASP.NET framemework, CSHTML and SASS)
-                    </li>
-                    <li>
-                      Project management of Storbie&apos;s new website build
-                      (Umbraco CMS)
-                    </li>
-                    <li>
-                      Development of front end features for the new site
-                      including the pricing page, feature grid and automated
-                      pop-up for lead capture.
-                    </li>
-                    <li>
-                      End-to-end management and implementation of Storbie&apos;s
-                      marketing strategy.
-                    </li>
-                  </ul>
-                </p>
+
+                <ul>
+                  <li>
+                    Maintaining and updating content on the old Storbie website
+                    (ASP.NET framemework, CSHTML and SASS)
+                  </li>
+                  <li>
+                    Project management of Storbie&apos;s new website build
+                    (Umbraco CMS)
+                  </li>
+                  <li>
+                    Development of front end features for the new site including
+                    the pricing page, feature grid and automated pop-up for lead
+                    capture.
+                  </li>
+                  <li>
+                    End-to-end management and implementation of Storbie&apos;s
+                    marketing strategy.
+                  </li>
+                </ul>
               </div>
               <div className="resume-item">
                 <h4>Website Consulting &amp; Development</h4>
@@ -176,19 +174,17 @@ export default function Resume() {
                 <p>
                   <em>Self-employed</em>
                 </p>
-                <p>
-                  <ul>
-                    <li>
-                      Design and build websites for clients (Wordpress, Craft
-                      CMS)
-                    </li>
-                    <li>Deploy websites to cloud hosting providers.</li>
-                    <li>
-                      Manage DNS records, support with domain authentication for
-                      email and third party apps.
-                    </li>
-                  </ul>
-                </p>
+
+                <ul>
+                  <li>
+                    Design and build websites for clients (Wordpress, Craft CMS)
+                  </li>
+                  <li>Deploy websites to cloud hosting providers.</li>
+                  <li>
+                    Manage DNS records, support with domain authentication for
+                    email and third party apps.
+                  </li>
+                </ul>
               </div>
               <div className="resume-item">
                 <h4>Marketing Coordinator</h4>
@@ -196,19 +192,18 @@ export default function Resume() {
                 <p>
                   <em>Creative HQ</em>
                 </p>
-                <p>
-                  <ul>
-                    <li>
-                      Managing websites for Creative HQ&apos;s three main brands
-                      (CHQ, Lightning Lab and GovTech).{' '}
-                    </li>
-                    <li>
-                      Planning, implementation and training (internal and
-                      external) of digital tools to enable digital workshops
-                      during the level 4 lockdown in 2020.
-                    </li>
-                  </ul>
-                </p>
+
+                <ul>
+                  <li>
+                    Managing websites for Creative HQ&apos;s three main brands
+                    (CHQ, Lightning Lab and GovTech).{' '}
+                  </li>
+                  <li>
+                    Planning, implementation and training (internal and
+                    external) of digital tools to enable digital workshops
+                    during the level 4 lockdown in 2020.
+                  </li>
+                </ul>
               </div>
               <div className="resume-item">
                 <h4>Account Executive</h4>
@@ -216,22 +211,21 @@ export default function Resume() {
                 <p>
                   <em>Isentia</em>
                 </p>
-                <p>
-                  <ul>
-                    <li>
-                      Providing technical support and guidance to maximise the
-                      value of Isentia&apos;s products.
-                    </li>
-                    <li>
-                      Working with clients to understand their needs, optimise
-                      their service.
-                    </li>
-                    <li>
-                      Strategic relationship managment with a view to grow
-                      oppotunities within client accounts.
-                    </li>
-                  </ul>
-                </p>
+
+                <ul>
+                  <li>
+                    Providing technical support and guidance to maximise the
+                    value of Isentia&apos;s products.
+                  </li>
+                  <li>
+                    Working with clients to understand their needs, optimise
+                    their service.
+                  </li>
+                  <li>
+                    Strategic relationship managment with a view to grow
+                    oppotunities within client accounts.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
