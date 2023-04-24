@@ -1,66 +1,103 @@
+import { Link, useParams } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../hooks'
+import { useEffect, useState } from 'react'
+import { FullPorfolio } from '../../models/portfolio'
+import { fetchPortfolioEntries } from '../actions/entries'
+import Loader from './Loader'
+
 export default function PortfolioDetails() {
+  const { data, loading, error } = useAppSelector((state) => state.entries)
+  const { portfolioId } = useParams()
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(fetchPortfolioEntries())
+  }, [dispatch])
+  {
+    error && <p>Something went wrong</p>
+  }
   return (
     <div id="portfolio-details" className="portfolio-details">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-8">
-            <h2 className="portfolio-title">
-              This is an example of portfolio detail
-            </h2>
-
-            <div className="portfolio-details-slider swiper">
-              <div className="swiper-wrapper align-items-center">
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/portfolio/portfolio-details-1.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/portfolio/portfolio-details-2.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div className="swiper-slide">
-                  <img
-                    src="assets/img/portfolio/portfolio-details-3.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="swiper-pagination"></div>
-            </div>
+        <Link to="/portfolio">
+          <div className="back-button">
+            <i className="bi bi-arrow-left"></i>
           </div>
+        </Link>
+        {loading ? (
+          <Loader />
+        ) : (
+          data
+            ?.filter((entry) => entry.entryId === Number(portfolioId))
+            .map((item) => {
+              return (
+                <div key={item.entryId} className="row">
+                  <div className="col-lg-8">
+                    <h2 className="portfolio-title">{item.entryTitle}</h2>
 
-          <div className="col-lg-4 portfolio-info">
-            <h3>Project information</h3>
-            <ul>
-              <li>
-                <strong>Category</strong>: Web design
-              </li>
-              <li>
-                <strong>Client</strong>: ASU Company
-              </li>
-              <li>
-                <strong>Project date</strong>: 01 March, 2020
-              </li>
-              <li>
-                <strong>Project URL</strong>: <a href="/">www.example.com</a>
-              </li>
-            </ul>
+                    <div className="portfolio-details-image">
+                      <img
+                        src={`/assets/img/portfolio/${item.image_url}`}
+                        alt={item.image_alt_text}
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
 
-            <p>
-              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque
-              inventore commodi labore quia quia. Exercitationem repudiandae
-              officiis neque suscipit non officia eaque itaque enim. Voluptatem
-              officia accusantium nesciunt est omnis tempora consectetur
-              dignissimos. Sequi nulla at esse enim cum deserunt eius.
-            </p>
-          </div>
-        </div>
+                  <div className="col-lg-4 portfolio-info">
+                    <h3>{item.sub_heading}</h3>
+                    <ul>
+                      {item.name && (
+                        <li>
+                          <strong>Category</strong>: {item.name}
+                        </li>
+                      )}
+                      {item.client && (
+                        <li>
+                          <strong>Client</strong>:
+                          <a href={item.client_url}>{item.client}</a>
+                        </li>
+                      )}
+                      {item.status && (
+                        <li>
+                          <strong>Project status</strong>: {item.status}
+                        </li>
+                      )}
+                    </ul>
+
+                    <div
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    ></div>
+                    <div className="portfolio-links">
+                      {item.repo_url && (
+                        <a
+                          title="View on GitHub"
+                          href={item.repo_url}
+                          className="github"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i className="bi bi-github"></i>
+                        </a>
+                      )}
+
+                      {item.demo_url && (
+                        <a
+                          title="Go to demo site"
+                          href={item.demo_url}
+                          className="demo"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <i className="bi bi-link"></i>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+        )}
       </div>
     </div>
   )

@@ -4,9 +4,9 @@ import {
   ENTRIES_PENDING,
   ENTRIES_SUCCESS,
 } from '../actions/entries'
-import { PortfolioEntry } from '../../models/portfolio'
+import { FullPorfolio } from '../../models/portfolio'
 interface EntriesState {
-  data: PortfolioEntry[] | undefined
+  data: FullPorfolio[] | undefined
   error: string | undefined
   loading: boolean
 }

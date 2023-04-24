@@ -1,7 +1,7 @@
 import request from 'superagent'
-import { PortfolioEntry } from '../../models/portfolio'
+import { FullPorfolio } from '../../models/portfolio'
 
-async function fetchPortfolioEntries(): Promise<PortfolioEntry[]> {
+async function fetchPortfolioEntries(): Promise<FullPorfolio[]> {
   const response = await request.get('/api/v1/portfolio-entries/')
   return response.body
 }

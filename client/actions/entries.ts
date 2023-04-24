@@ -1,5 +1,5 @@
 import { ThunkAction } from '../store'
-import { PortfolioEntry } from '../../models/portfolio'
+import { FullPorfolio } from '../../models/portfolio'
 import api from '../api/entries'
 
 export const ENTRIES_PENDING = 'ENTRIES_PENDING'
@@ -8,7 +8,7 @@ export const ENTRIES_ERROR = 'ENTRIES_ERROR'
 
 export type EntriesAction =
   | { type: typeof ENTRIES_PENDING; payload: void }
-  | { type: typeof ENTRIES_SUCCESS; payload: PortfolioEntry[] }
+  | { type: typeof ENTRIES_SUCCESS; payload: FullPorfolio[] }
   | { type: typeof ENTRIES_ERROR; payload: string }
 
 export function entriesPending(): EntriesAction {
@@ -17,7 +17,7 @@ export function entriesPending(): EntriesAction {
   } as EntriesAction
 }
 
-export function entriesSuccess(allEntries: PortfolioEntry[]): EntriesAction {
+export function entriesSuccess(allEntries: FullPorfolio[]): EntriesAction {
   return {
     type: ENTRIES_SUCCESS,
     payload: allEntries,

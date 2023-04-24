@@ -1194,3 +1194,32 @@ section .container {
  .contact-box h3{
   color: #18d26e;
  }
+
+ .portfolio-links i {
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+ }
+ .back-button{
+  font-size: 1.1rem;
+  overflow:hidden;
+  margin-bottom: 15px;
+ }
+
+ .back-button::after{
+  position: relative;
+  left: -100px;
+  transition: left .3s;
+  content: ' Go back'
+ }
+
+ @media only screen and (max-width: 767.96px){
+  .back-button::after{
+    left: 10px;
+  }
+ }
+
+ .back-button:hover::after{
+  left: 10px;
+
+ }

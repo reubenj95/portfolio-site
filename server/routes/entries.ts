@@ -7,3 +7,5 @@ router.get('/', async (req, res) => {
   const entries = await db.fetchPortfolioEntries()
   res.json(entries)
 })
+
+export default router

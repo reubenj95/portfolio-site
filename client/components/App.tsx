@@ -8,17 +8,7 @@ import { Route, Routes, useParams } from 'react-router-dom'
 import PortfolioDetails from './PortfolioDetails'
 
 function App() {
-  //const [selected, setSelected] = useState('Home')
   const { selected } = useParams()
-  const [navState, setNavState] = useState('')
-
-  useEffect(() => {
-    if (!selected) {
-      setNavState('')
-    } else {
-      setNavState('header-top')
-    }
-  })
 
   return (
     <>
@@ -28,7 +18,7 @@ function App() {
         <Route path="resume" element={<Resume />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="portfolio-details" element={<PortfolioDetails />} />
+        <Route path="portfolio/:portfolioId" element={<PortfolioDetails />} />
       </Routes>
     </>
   )

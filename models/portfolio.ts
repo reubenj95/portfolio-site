@@ -1,13 +1,20 @@
 export interface PortfolioEntry {
-  id: number
-  title: string
+  entryId: number
+  entryTitle: string
   sub_heading: string
-  category: number
-  client: number
-  client_url: number
   status: string
   demo_url: string
   repo_url: string
   description: string
   date: Date
+  collaboratorName: string
+  image_url: string
+  image_alt_text: string
+  client: string
+  client_url: string
+}
+
+export interface FullPorfolio extends PortfolioEntry {
+  image_url: string
+  name: string
 }

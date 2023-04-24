@@ -8,7 +8,7 @@ exports.seed = async function (knex) {
     {
       id: 1,
       entry_id: 1,
-      image_url: '/img/portfolio/portfolio-1.jpg',
+      image_url: 'portfolio-1.jpg',
       image_alt_text: 'sample portfolio image',
     },
   ])
