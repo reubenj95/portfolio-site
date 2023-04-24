@@ -8,7 +8,7 @@ export const CATEGORIES_ERROR = 'CATEGORIES_ERROR'
 
 export type CategoryAction =
   | { type: typeof CATEGORIES_PENDING; payload: void }
-  | { type: typeof CATEGORIES_SUCCESS; payload: Category[] }
+  | { type: typeof CATEGORIES_SUCCESS; payload: Category[] | undefined }
   | { type: typeof CATEGORIES_ERROR; payload: string }
 
 export function categoriesPending(): CategoryAction {
@@ -17,7 +17,9 @@ export function categoriesPending(): CategoryAction {
   } as CategoryAction
 }
 
-export function categoriesSuccess(categories: Category[]): CategoryAction {
+export function categoriesSuccess(
+  categories: Category[] | undefined
+): CategoryAction {
   return {
     type: CATEGORIES_SUCCESS,
     payload: categories,
@@ -35,8 +37,8 @@ export function fetchCategories(): ThunkAction {
   return async (dispatch) => {
     try {
       dispatch(categoriesPending())
-      const entries = await api.fetchCategories()
-      dispatch(categoriesSuccess(entries))
+      const categories = await api.fetchCategories()
+      dispatch(categoriesSuccess(categories))
     } catch (err) {
       if (err instanceof Error) {
         dispatch(categoriesError(err.message))

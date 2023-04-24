@@ -1,7 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../hooks'
-import { useEffect, useState } from 'react'
-import { FullPorfolio } from '../../models/portfolio'
+import { useEffect } from 'react'
 import { fetchPortfolioEntries } from '../actions/entries'
 import Loader from './Loader'
 

@@ -4,8 +4,13 @@ import db from '../db/categories'
 const router = Router()
 
 router.get('/', async (req, res) => {
-  const categories = await db.fetchCategories()
-  res.json(categories)
+  try {
+    const categories = await db.fetchCategories()
+    res.json(categories)
+  } catch (err) {
+    res.status(500)
+    res.json('Something went wrong.')
+  }
 })
 
 export default router

@@ -1,15 +1,12 @@
-import { useEffect, useState } from 'react'
 import About from './About'
 import Nav from './Nav'
 import Resume from './Resume'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
-import { Route, Routes, useParams } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import PortfolioDetails from './PortfolioDetails'
 
 function App() {
-  const { selected } = useParams()
-
   return (
     <>
       <Routes>
