@@ -1224,3 +1224,11 @@ section .container {
   left: 10px;
 
  }
+
+ .DraftEditor-root{
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 4px;
+  min-height: 300px;
+  color: #000;
+ }
