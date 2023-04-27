@@ -5,7 +5,6 @@ import Portfolio from './Portfolio'
 import Contact from './Contact'
 import { Route, Routes } from 'react-router-dom'
 import PortfolioDetails from './PortfolioDetails'
-import EntryForm from './EntryForm'
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="contact" element={<Contact />} />
         <Route path="portfolio/:portfolioId" element={<PortfolioDetails />} />
-        <Route path="admin" element={<EntryForm />} />
       </Routes>
     </>
   )

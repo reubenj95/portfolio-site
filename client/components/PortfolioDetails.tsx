@@ -32,19 +32,64 @@ export default function PortfolioDetails() {
               return (
                 <div key={item.entryId} className="row">
                   <div className="col-lg-8">
-                    <h2 className="portfolio-title">{item.entryTitle}</h2>
+                    <h1 className="portfolio-title">{item.entryTitle}</h1>
 
                     <div className="portfolio-details-image">
-                      <img
-                        src={`/assets/img/portfolio/${item.image_url}`}
-                        alt={item.image_alt_text}
-                        className="img-fluid"
-                      />
+                      {item.video_demo ? (
+                        <div className="embed-container">
+                          <iframe
+                            src="https://www.youtube.com/embed/SOkFt_XyzgU?start=2150"
+                            allowFullScreen
+                            title="demo video"
+                          ></iframe>
+                        </div>
+                      ) : (
+                        <img
+                          src={`/assets/img/portfolio/${item.image_url}`}
+                          alt={item.image_alt_text}
+                          className="img-fluid"
+                        />
+                      )}
+                      <div className="portfolio-link-flex">
+                        {item.repo_url && (
+                          <div className="portfolio-link-box">
+                            <a
+                              title="View on GitHub"
+                              href={item.repo_url}
+                              className="github"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <span className="portfolio-link-content">
+                                <i className="bi bi-github"></i>{' '}
+                                <strong>View on GitHub</strong>
+                              </span>
+                            </a>
+                          </div>
+                        )}
+
+                        {item.demo_url && (
+                          <div className="portfolio-link-box">
+                            <a
+                              title="Go to demo site"
+                              href={item.demo_url}
+                              className="demo"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <span className="portfolio-link-content">
+                                <i className="bi bi-link"></i>{' '}
+                                <strong> View demo</strong>
+                              </span>
+                            </a>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
 
                   <div className="col-lg-4 portfolio-info">
-                    <h3>{item.sub_heading}</h3>
+                    <h2>{item.sub_heading}</h2>
                     <ul>
                       {item.name && (
                         <li>
@@ -67,31 +112,6 @@ export default function PortfolioDetails() {
                     <div
                       dangerouslySetInnerHTML={{ __html: item.description }}
                     ></div>
-                    <div className="portfolio-links">
-                      {item.repo_url && (
-                        <a
-                          title="View on GitHub"
-                          href={item.repo_url}
-                          className="github"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="bi bi-github"></i>
-                        </a>
-                      )}
-
-                      {item.demo_url && (
-                        <a
-                          title="Go to demo site"
-                          href={item.demo_url}
-                          className="demo"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <i className="bi bi-link"></i>
-                        </a>
-                      )}
-                    </div>
                   </div>
                 </div>
               )

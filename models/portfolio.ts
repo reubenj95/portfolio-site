@@ -13,6 +13,7 @@ export interface PortfolioEntry {
   client: string
   client_url: string
   category: string
+  video_demo: string
 }
 
 export interface FullPorfolio extends PortfolioEntry {

@@ -8,8 +8,14 @@ exports.seed = async function (knex) {
     {
       id: 1,
       entry_id: 1,
-      image_url: 'portfolio-1.jpg',
-      image_alt_text: 'sample portfolio image',
+      image_url: 'baskit-wireframes.png',
+      image_alt_text: 'Bask.it app wireframes',
+    },
+    {
+      id: 2,
+      entry_id: 2,
+      image_url: 'club-connect-home.png',
+      image_alt_text: 'Club Connect user dashboard view',
     },
   ])
 }
