@@ -3,20 +3,13 @@ import connection from './connection'
 
 function fetchPortfolioEntries(db = connection): Promise<FullPorfolio[]> {
   return db('portfolio')
-    .join('portfolio_images', 'portfolio.id', '=', 'portfolio_images.entry_id')
-    .join('categories', 'portfolio.category', '=', 'categories.id')
-    .join(
-      'portfolio_collaborators',
+    .leftJoin(
+      'portfolio_images',
       'portfolio.id',
       '=',
-      'portfolio_collaborators.entry_id'
+      'portfolio_images.entry_id'
     )
-    .join(
-      'collaborators',
-      'portfolio_collaborators.collaborator_id',
-      '=',
-      'collaborators.id'
-    )
+    .leftJoin('categories', 'portfolio.category', '=', 'categories.id')
     .select(
       'portfolio.id as entryId',
       'portfolio.title as entryTitle',
@@ -24,14 +17,15 @@ function fetchPortfolioEntries(db = connection): Promise<FullPorfolio[]> {
       'portfolio.status',
       'portfolio.demo_url',
       'portfolio.repo_url',
+      'portfolio.video_demo',
       'portfolio.description',
       'portfolio.date',
       'portfolio.client',
       'portfolio.client_url',
-      'collaborators.name as collaboratorName',
       'portfolio_images.image_url',
       'portfolio_images.image_alt_text',
-      'categories.name as category'
+      'categories.name as category',
+      'categories.id as categoryId'
     )
 }
 

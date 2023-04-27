@@ -26,6 +26,7 @@ export default function Portfolio() {
         (entry) => entry.category.toLowerCase() === selected.toLowerCase()
       )
       setFilteredEntries(filteredArray)
+      console.log(filteredArray)
     }
   }, [selected, entries.data])
 

@@ -12,17 +12,14 @@ export default function Resume() {
 
           <div className="row">
             <div className="col-lg-6">
-              <h3 className="resume-title">Sumary</h3>
+              <h3 className="resume-title">Summary</h3>
               <div className="resume-item pb-0">
-                <h4>Why I&apos;m worth your time</h4>
                 <p>
-                  <em>
-                    I am an innovative problem solver and an excellent
-                    communicator. I have taken my corporate business experience
-                    and expanded my capabilities to include a strong technical
-                    skill set. If you need a functional, effective and
-                    customer-focused solution to a problem, I&apos;m your guy.
-                  </em>
+                  I am an innovative problem solver and an excellent
+                  communicator. I have taken my corporate business experience
+                  and expanded my capabilities to include a strong technical
+                  skill set. If you need a functional, effective and
+                  customer-focused solution to a problem, I&apos;m your guy.
                 </p>
                 <a href="/assets/img/Reuben_jensen_CV_22.pdf" target="_blank">
                   Click here to download a PDF copy of my resume

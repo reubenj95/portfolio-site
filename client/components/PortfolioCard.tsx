@@ -8,8 +8,8 @@ interface Props {
 export default function PorfolioCard(props: Props) {
   const { entry } = props
   return (
-    <Link to={entry.entryId.toString()}>
-      <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+    <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+      <Link to={entry.entryId.toString()}>
         <div className="portfolio-wrap">
           <img
             src={`assets/img/portfolio/${entry.image_url}`}
@@ -22,7 +22,7 @@ export default function PorfolioCard(props: Props) {
             <p>{entry.category}</p>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }

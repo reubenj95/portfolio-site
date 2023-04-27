@@ -15,7 +15,7 @@ export default function Contact() {
               <div className="contact-box">
                 <h3>Get in touch</h3>
                 <p>
-                  You can connect with me direct, hit me up on social media of
+                  You can connect with me direct, hit me up on social media or
                   drop me a line using the form below. I&apos;ll do my best to
                   get back to you ASAP.
                 </p>
