@@ -4,7 +4,7 @@
  */
 exports.seed = async function (knex) {
   await knex('categories').insert([
-    { id: 1, name: 'Brand Website' },
+    { id: 1, name: 'CLI' },
     { id: 2, name: 'Ecommerce' },
     { id: 3, name: 'Fullstack' },
   ])

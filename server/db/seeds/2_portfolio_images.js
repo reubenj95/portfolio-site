@@ -17,5 +17,11 @@ exports.seed = async function (knex) {
       image_url: 'club-connect-home.png',
       image_alt_text: 'Club Connect user dashboard view',
     },
+    {
+      id: 3,
+      entry_id: 3,
+      image_url: 'ascii-art.png',
+      image_alt_text: 'ASCII Art Command Line Application',
+    },
   ])
 }
