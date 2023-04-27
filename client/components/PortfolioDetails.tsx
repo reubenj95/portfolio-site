@@ -89,22 +89,32 @@ export default function PortfolioDetails() {
                   </div>
 
                   <div className="col-lg-4 portfolio-info">
-                    <h2>{item.sub_heading}</h2>
+                    <h2 className="info-heading">{item.sub_heading}</h2>
                     <ul>
                       {item.name && (
                         <li>
-                          <strong>Category</strong>: {item.name}
+                          <strong>
+                            <span className="bold-subtitle">Category</span>
+                          </strong>
+                          : {item.name}
                         </li>
                       )}
                       {item.client && (
                         <li>
-                          <strong>Client</strong>:
-                          <a href={item.client_url}>{item.client}</a>
+                          <strong>
+                            <span className="bold-subtitle">Client</span>
+                          </strong>
+                          :<a href={item.client_url}>{item.client}</a>
                         </li>
                       )}
                       {item.status && (
                         <li>
-                          <strong>Project status</strong>: {item.status}
+                          <strong>
+                            <span className="bold-subtitle">
+                              Project status
+                            </span>
+                          </strong>
+                          : {item.status}
                         </li>
                       )}
                     </ul>

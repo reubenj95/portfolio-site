@@ -997,6 +997,26 @@ section .container {
   background-color: #18d26e;
 }
 
+.portfolio-details .portfolio-info h3 {
+  color: #18d26e
+}
+
+.portfolio-details .info-heading::after {
+  display: block;
+  content: "";
+  position: relative;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #18d26e;
+  width: 80px;
+  margin-bottom: 25px;
+
+}
+.portfolio-details .portfolio-info .bold-subtitle {
+  color: #18d26e
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
