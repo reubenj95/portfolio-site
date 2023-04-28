@@ -21,7 +21,10 @@ export default function Resume() {
                   skill set. If you need a functional, effective and
                   customer-focused solution to a problem, I&apos;m your guy.
                 </p>
-                <a href="/assets/img/Reuben_jensen_CV_22.pdf" target="_blank">
+                <a
+                  href="/assets/uploads/Reuben-Hawthorne-Jensen-CV-2023_1.pdf"
+                  target="_blank"
+                >
                   Click here to download a PDF copy of my resume
                 </a>
               </div>

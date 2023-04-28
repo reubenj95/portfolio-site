@@ -286,6 +286,7 @@ h6 {
   .navbar ul {
     display: none;
   }
+
 }
 
 .navbar-mobile {
@@ -925,6 +926,19 @@ section .container {
   right: 15px;
 }
 
+@media (max-width: 991px) {
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 1;
+  }
+  .portfolio .portfolio-wrap::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1174,12 +1188,19 @@ section .container {
   }
 }
 
+.contact-success{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
 /*--------------------------------------------------------------
 # Credits
 --------------------------------------------------------------*/
 .credits {
   position: fixed;
-  right: 0;
   left: 0;
   bottom: 0;
   padding: 15px;

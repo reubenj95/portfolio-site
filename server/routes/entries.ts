@@ -6,7 +6,6 @@ const router = Router()
 router.get('/', async (req, res) => {
   try {
     const entries = await db.fetchPortfolioEntries()
-    console.log(entries)
     res.json(entries)
   } catch (err) {
     res.status(500)
