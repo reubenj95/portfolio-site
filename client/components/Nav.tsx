@@ -38,7 +38,7 @@ export default function Nav(props: Props) {
             tabIndex={0}
           ></i>
           <ul>
-            {navItems.map((item, index) => {
+            {navItems.map((item) => {
               if (item === selected) {
                 return (
                   <li key={item}>
