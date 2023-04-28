@@ -18,6 +18,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    fallback: {
+      fs: false,
+      os: false,
+      path: false,
+    },
   },
   devtool: 'source-map',
 }
