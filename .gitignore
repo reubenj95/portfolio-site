@@ -3,5 +3,5 @@ static
 npm-debug.log
 bundle.*
 portfolio-entry-template.html
-
+.env
 sendgrid.env
