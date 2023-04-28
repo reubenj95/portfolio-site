@@ -1,13 +1,22 @@
 import { Link } from 'react-router-dom'
 
 interface Props {
-  //funcSelected: React.Dispatch<React.SetStateAction<string>>
   selected: string | undefined
   state: string
 }
 
 export default function Nav(props: Props) {
   const { selected, state } = props
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLElement>) {
+    if (e.key === 'Enter') {
+      toggleMobileNav()
+    }
+  }
+
+  function toggleMobileNav() {
+    document.querySelector('nav')?.classList.toggle('navbar-mobile')
+  }
 
   const navItems = ['About', 'Resume', 'Portfolio', 'Contact']
   return (
@@ -16,10 +25,6 @@ export default function Nav(props: Props) {
         <h1>
           <Link to="/">Reuben Hawthorne-Jensen</Link>
         </h1>
-        {/* Uncomment below if you prefer to use an image logo */}
-        <a href="index.html" className="mr-auto">
-          <img src="assets/img/logo.png" alt="" className="img-fluid" />
-        </a>
         <h2>
           I&apos;m a <span>full stack developer</span> from Wellington, NZ
         </h2>
@@ -36,12 +41,23 @@ export default function Nav(props: Props) {
         </p>
 
         <nav id="navbar" className="navbar">
+          <i
+            className="bi bi-list mobile-nav-toggle"
+            role="button"
+            onClick={toggleMobileNav}
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+          ></i>
           <ul>
-            {/* {navItems.map((item) => {
+            {navItems.map((item, index) => {
               if (item === selected) {
                 return (
                   <li key={item}>
-                    <Link to={`/${item}`} className="nav-link active">
+                    <Link
+                      to={`/${item}`}
+                      className="nav-link active"
+                      tabIndex={0}
+                    >
                       {item}
                     </Link>
                   </li>
@@ -49,15 +65,18 @@ export default function Nav(props: Props) {
               } else {
                 return (
                   <li key={item}>
-                    <Link to={`/${item.toLowerCase()}`} className="nav-link">
+                    <Link
+                      to={`/${item.toLowerCase()}`}
+                      className="nav-link"
+                      tabIndex={0}
+                    >
                       {item}
                     </Link>
                   </li>
                 )
               }
-            })} */}
+            })}
           </ul>
-          <i className="bi bi-list mobile-nav-toggle"></i>
         </nav>
 
         <div className="social-links">
@@ -79,6 +98,14 @@ export default function Nav(props: Props) {
             rel="noreferrer"
           >
             <i className="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="/assets/uploads/Reuben-Hawthorne-Jensen-CV-2023_1.pdf"
+            className="donwload-cv"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="bi bi-file-earmark-arrow-down-fill"></i>
           </a>
         </div>
       </div>

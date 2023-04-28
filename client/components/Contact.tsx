@@ -1,6 +1,10 @@
+import { useState } from 'react'
 import Nav from './Nav'
+import ContactForm from './ContactForm'
 
 export default function Contact() {
+  const [messageSent, setMessageSent] = useState(false)
+  console.log(messageSent)
   return (
     <>
       <Nav selected="Contact" state="header-top" />
@@ -15,7 +19,7 @@ export default function Contact() {
               <div className="contact-box">
                 <h3>Get in touch</h3>
                 <p>
-                  You can connect with me direct, hit me up on social media of
+                  You can connect with me direct, hit me up on social media or
                   drop me a line using the form below. I&apos;ll do my best to
                   get back to you ASAP.
                 </p>
@@ -62,64 +66,20 @@ export default function Contact() {
             <div className="col-md-6 mt-4 d-flex align-items-stretch"></div>
             <div className="col-md-6 mt-4 d-flex align-items-stretch"></div>
           </div>
-
-          <form
-            action="forms/contact.php"
-            method="post"
-            className="php-email-form mt-4"
-          >
-            <div className="row">
-              <div className="col-md-6 form-group">
-                <input
-                  type="text"
-                  name="name"
-                  className="form-control"
-                  id="name"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div className="col-md-6 form-group mt-3 mt-md-0">
-                <input
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
+          {messageSent && messageSent ? (
+            <div>
+              <p>Thanks for reaching out! I&apos;ll be in touch soon.</p>
+              <button
+                onClick={() => {
+                  setMessageSent(false)
+                }}
+              >
+                Reset form
+              </button>
             </div>
-            <div className="form-group mt-3">
-              <input
-                type="text"
-                className="form-control"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div className="form-group mt-3">
-              <textarea
-                className="form-control"
-                name="message"
-                rows={5}
-                placeholder="Message"
-                required
-              ></textarea>
-            </div>
-            <div className="my-3">
-              <div className="loading">Loading</div>
-              <div className="error-message"></div>
-              <div className="sent-message">
-                Your message has been sent. Thank you!
-              </div>
-            </div>
-            <div className="text-center">
-              <button type="submit">Send Message</button>
-            </div>
-          </form>
+          ) : (
+            <ContactForm />
+          )}
         </div>
       </section>
     </>

@@ -286,6 +286,7 @@ h6 {
   .navbar ul {
     display: none;
   }
+
 }
 
 .navbar-mobile {
@@ -782,7 +783,7 @@ section .container {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-flters li {
+.portfolio #portfolio-flters button {
   cursor: pointer;
   display: inline-block;
   padding: 8px 16px 10px 16px;
@@ -795,14 +796,15 @@ section .container {
   margin: 0 3px 10px 3px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
+  border-style: solid;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters button:hover,
+.portfolio #portfolio-flters button.filter-active {
   background: #18d26e;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.portfolio #portfolio-flters button:last-child {
   margin-right: 0;
 }
 
@@ -874,12 +876,12 @@ section .container {
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
@@ -924,6 +926,19 @@ section .container {
   right: 15px;
 }
 
+@media (max-width: 991px) {
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 1;
+  }
+  .portfolio .portfolio-wrap::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -951,6 +966,7 @@ section .container {
 
 .portfolio-details .portfolio-info {
   padding-top: 45px;
+  background-color: #000;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -970,7 +986,6 @@ section .container {
 }
 
 .portfolio-details .portfolio-info p {
-  font-size: 15px;
   padding: 15px 0 0 0;
 }
 
@@ -994,6 +1009,26 @@ section .container {
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #18d26e;
+}
+
+.portfolio-details .portfolio-info h3 {
+  color: #18d26e
+}
+
+.portfolio-details .info-heading::after {
+  display: block;
+  content: "";
+  position: relative;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #18d26e;
+  width: 80px;
+  margin-bottom: 25px;
+
+}
+.portfolio-details .portfolio-info .bold-subtitle {
+  color: #18d26e
 }
 
 /*--------------------------------------------------------------
@@ -1153,12 +1188,19 @@ section .container {
   }
 }
 
+.contact-success{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
 /*--------------------------------------------------------------
 # Credits
 --------------------------------------------------------------*/
 .credits {
   position: fixed;
-  right: 0;
   left: 0;
   bottom: 0;
   padding: 15px;
@@ -1194,3 +1236,86 @@ section .container {
  .contact-box h3{
   color: #18d26e;
  }
+
+ .portfolio-links i {
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+ }
+ .back-button{
+  font-size: 1.1rem;
+  overflow:hidden;
+  margin-bottom: 15px;
+ }
+
+ .back-button::after{
+  position: relative;
+  left: -100px;
+  transition: left .3s;
+  content: ' Go back'
+ }
+
+ @media only screen and (max-width: 767.96px){
+  .back-button::after{
+    left: 10px;
+  }
+ }
+
+ .back-button:hover::after{
+  left: 10px;
+
+ }
+
+ .tech-list{
+  display: flex;
+ }
+
+ .tech-list ul{
+  min-width: 150px;
+  list-style-type: circle !important;
+  list-style-position: inside !important;
+ }
+
+ .portfolio-info h3{
+  margin: 25px 0 15px 0 !important;
+ }
+
+ .portfolio-info p {
+  margin: 10px 0 0 0 !important;
+  padding: 0 !important;
+ }
+
+ .embed-container {
+   position: relative;
+   padding-bottom: 56.25%;
+   height: 0;
+   overflow: hidden;
+   max-width: 100%;
+ }
+
+ .embed-container iframe,
+ .embed-container object,
+ .embed-container embed {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+
+ .portfolio-link-content {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-right: 10px;
+  font-size: 18px;
+ }
+
+.portfolio-link-content i{
+  margin-right: 8px;
+  
+}
+
+.portfolio-link-flex{
+  display: flex;
+}
