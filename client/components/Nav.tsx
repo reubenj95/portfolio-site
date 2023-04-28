@@ -28,17 +28,6 @@ export default function Nav(props: Props) {
         <h2>
           I&apos;m a <span>full stack developer</span> from Wellington, NZ
         </h2>
-        <p>
-          This portfolio site is still a work in progress. In the meantime,
-          <br />{' '}
-          <a
-            href="/assets/uploads/Reuben_hawthorne-jensen_CV.pdf"
-            target="_blank"
-          >
-            click here to download my CV
-          </a>{' '}
-          or connect with me on social media below.
-        </p>
 
         <nav id="navbar" className="navbar">
           <i
