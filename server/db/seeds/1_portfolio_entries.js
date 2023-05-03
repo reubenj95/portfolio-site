@@ -49,5 +49,20 @@ exports.seed = async function (knex) {
         "<p>Sometimes the terminal is a little boring. So why not spruce it up with a little art?</p><p>This project was completed as a part of the Dev Academy bootcamp. It was an exercise in working with command line applications, learning to create simple but user-friendly interfaces.</p><h3>Technology Used</h3><div class='tech-list'><ul><li>Node.js</li><li>Node File System (Fs)</li><li>Prompt</li></ul></div>",
       date: Date.now(),
     },
+    {
+      id: 4,
+      title: 'Droble',
+      sub_heading: 'Helping your dress your best',
+      category: 3,
+      client: null,
+      client_url: null,
+      status: 'In Development',
+      demo_url: null,
+      repo_url: 'https://github.com/reubenj95/droble',
+      video_demo: null,
+      description:
+        "<p>My wife is plagued by an issue for which few good solutions exist, and I am sure she is not alone. That is, deciding which outfit to wear each day. I set out to build a simple application to help her decide. The application allows the user to catalogue their wardrobe, and build digital outfits for any occasion.</p><p>The application is a React/Redux front end with Ruby on Rails behind the scenes and will be deployed using two EC2 instances on AWS once the MVP is completed.</p><h3>Technology Used</h3><div class='tech-list'><ul><li>React</li><li>Redux</li></ul><ul><li>Ruby on Rails</li><li>AWS (EC2, S3)</li></ul></div>",
+      date: Date.now(),
+    },
   ])
 }

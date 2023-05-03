@@ -23,5 +23,11 @@ exports.seed = async function (knex) {
       image_url: 'ascii-art.png',
       image_alt_text: 'ASCII Art Command Line Application',
     },
+    {
+      id: 4,
+      entry_id: 4,
+      image_url: 'droble-wireframe.png',
+      image_alt_text: 'Droble wireframes and app preview',
+    },
   ])
 }
