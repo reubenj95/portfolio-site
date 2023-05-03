@@ -89,7 +89,7 @@ export default function Nav(props: Props) {
             <i className="bi bi-linkedin"></i>
           </a>
           <a
-            href="/assets/uploads/Reuben-Hawthorne-Jensen-CV-2023_1.pdf"
+            href="/assets/uploads/Reuben_Hawthorne-Jensen_CV_2023_2.pdf"
             className="donwload-cv"
             target="_blank"
             rel="noreferrer"
