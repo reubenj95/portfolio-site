@@ -22,7 +22,7 @@ export default function Resume() {
                   customer-focused solution to a problem, I&apos;m your guy.
                 </p>
                 <a
-                  href="/assets/uploads/Reuben-Hawthorne-Jensen-CV-2023_1.pdf"
+                  href="/assets/uploads/Reuben_Hawthorne-Jensen_CV_2023_2.pdf"
                   target="_blank"
                 >
                   Click here to download a PDF copy of my resume
