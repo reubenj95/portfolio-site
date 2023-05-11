@@ -1200,6 +1200,7 @@ section .container {
 # Credits
 --------------------------------------------------------------*/
 .credits {
+  width: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -1208,6 +1209,9 @@ section .container {
   font-size: 13px;
   color: #fff;
   z-index: 999999;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 @media (max-width: 992px) {
@@ -1318,4 +1322,10 @@ section .container {
 
 .portfolio-link-flex{
   display: flex;
+}
+
+#privacy{
+  position: static;
+  opacity: 1;
+  padding: 100px;
 }
